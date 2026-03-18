@@ -1,27 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  // 1. App settings
+  // 👇 Required for GitHub Pages
   app: {
     baseURL: '/ainuxt/' // replace with your repo name
   },
 
-  // 2. Compatibility
-  compatibilityDate: '2024-07-11',
-
-  // 3. CSS
-  css: ['~/assets/css/main.css'],
-
-  // 4. Devtools
-  devtools: {
-    enabled: true
-  },
-
-  // 5. Experimental
-  experimental: {
-    viewTransition: true
-  },
-
-  // 6. Modules
   modules: [
     '@nuxt/eslint',
     '@nuxt/ui',
@@ -32,7 +15,12 @@ export default defineNuxtConfig({
     'nuxt-csurf'
   ],
 
-  // 7. MDC
+  devtools: {
+    enabled: true
+  },
+
+  css: ['~/assets/css/main.css'],
+
   mdc: {
     headings: {
       anchorLinks: false
@@ -43,27 +31,29 @@ export default defineNuxtConfig({
     }
   },
 
-  // 8. Nitro
+  experimental: {
+    viewTransition: true
+  },
+
+  compatibilityDate: '2024-07-11',
+
   nitro: {
     experimental: {
       openAPI: true
     }
   },
 
-  // 9. Hub
   hub: {
     db: 'sqlite',
     blob: true
   },
 
-  // 10. Vite
   vite: {
     optimizeDeps: {
       include: ['striptags']
     }
   },
 
-  // 11. ESLint
   eslint: {
     config: {
       stylistic: {
