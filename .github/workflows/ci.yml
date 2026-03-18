@@ -3,7 +3,7 @@ name: ci
 on:
   push:
     branches:
-      - main  # adjust if your default branch is different
+      - main   # adjust if your default branch is different
 
 jobs:
   ci:
