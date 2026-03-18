@@ -57,7 +57,7 @@ export default defineNuxtConfig({
     }
   },
 
-  // 👇 Add this block for GitHub Pages
+  // Add this block for GitHub Pages
   app: {
     baseURL: '/ainuxt/'   // replace with your repo name
   }
