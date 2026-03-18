@@ -1,11 +1,27 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  // 1. Core app settings
+  // 1. App settings
   app: {
     baseURL: '/ainuxt/' // replace with your repo name
   },
 
-  // 2. Modules
+  // 2. Compatibility
+  compatibilityDate: '2024-07-11',
+
+  // 3. CSS
+  css: ['~/assets/css/main.css'],
+
+  // 4. Devtools
+  devtools: {
+    enabled: true
+  },
+
+  // 5. Experimental
+  experimental: {
+    viewTransition: true
+  },
+
+  // 6. Modules
   modules: [
     '@nuxt/eslint',
     '@nuxt/ui',
@@ -16,15 +32,7 @@ export default defineNuxtConfig({
     'nuxt-csurf'
   ],
 
-  // 3. Devtools
-  devtools: {
-    enabled: true
-  },
-
-  // 4. CSS
-  css: ['~/assets/css/main.css'],
-
-  // 5. MDC
+  // 7. MDC
   mdc: {
     headings: {
       anchorLinks: false
@@ -34,14 +42,6 @@ export default defineNuxtConfig({
       shikiEngine: 'javascript'
     }
   },
-
-  // 6. Experimental
-  experimental: {
-    viewTransition: true
-  },
-
-  // 7. Compatibility
-  compatibilityDate: '2024-07-11',
 
   // 8. Nitro
   nitro: {
