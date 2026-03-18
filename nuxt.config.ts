@@ -1,5 +1,9 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+// nuxt.config.ts
 export default defineNuxtConfig({
+  devtools: {
+    enabled: true
+  },
+
   modules: [
     '@nuxt/eslint',
     '@nuxt/ui',
@@ -10,42 +14,25 @@ export default defineNuxtConfig({
     'nuxt-csurf'
   ],
 
-  devtools: {
-    enabled: true
-  },
-
   css: ['~/assets/css/main.css'],
 
   mdc: {
-    headings: {
-      anchorLinks: false
-    },
-    highlight: {
-      shikiEngine: 'javascript'
-    }
+    headings: { anchorLinks: false },
+    highlight: { shikiEngine: 'javascript' }
   },
 
-  experimental: {
-    viewTransition: true
-  },
+  experimental: { viewTransition: true },
 
   compatibilityDate: '2024-07-11',
 
   nitro: {
-    experimental: {
-      openAPI: true
-    }
+    experimental: { openAPI: true }
   },
 
-  hub: {
-    db: 'sqlite',
-    blob: true
-  },
+  hub: { db: 'sqlite', blob: true },
 
   vite: {
-    optimizeDeps: {
-      include: ['striptags']
-    }
+    optimizeDeps: { include: ['striptags'] }
   },
 
   eslint: {
@@ -57,7 +44,7 @@ export default defineNuxtConfig({
     }
   },
 
-  // Add this block for GitHub Pages
+  //Add this for GitHub Pages
   app: {
     baseURL: '/ainuxt/'   // replace with your repo name
   }
