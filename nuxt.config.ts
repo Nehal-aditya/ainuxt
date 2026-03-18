@@ -21,7 +21,6 @@ export default defineNuxtConfig({
       anchorLinks: false
     },
     highlight: {
-      // noApiRoute: true
       shikiEngine: 'javascript'
     }
   },
@@ -56,5 +55,10 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
+  },
+
+  // 👇 Add this block for GitHub Pages
+  app: {
+    baseURL: '/ainuxt/'   // replace with your repo name
   }
 })
